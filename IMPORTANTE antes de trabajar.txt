@@ -1,0 +1,6 @@
+ya vimos lo importante y las ideas de un BACKEND ahora:
+
+
+1. crea servidores en todos los leguajes que conozcas
+2. a cada uno dale conexión a todas las bases de datos
+3. deja todos los perfiles de las BD para todos los serves
