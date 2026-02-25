@@ -11,7 +11,33 @@ def Hello_world():
 @app.route("/api/users")
 def get_users():
     return{
-        "users":["manue", "sandra", "gaby", "vale", "alejandro"]
+        "users":[
+            { 
+              "id": 1,
+              "name": "manuel",
+              "lastname": "zarate"
+            },
+            {
+              "id": 2,
+              "name": "sandra",
+              "lastname": "Beltran"    
+            },
+            {
+                "id":3,
+                "name":"gaby",
+                "lastname": "niño"     
+            },
+            {
+                "id": 4,
+                "name": "vale",
+                "lastname": "zarate"   
+            },
+            {
+                "id": 5,
+                "name": "alejadro",
+                "lastname": "zarate"   
+            } 
+            ]
     }
     
 @app.route("/api/fruits")

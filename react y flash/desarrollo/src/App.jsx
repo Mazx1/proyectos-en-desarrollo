@@ -1,10 +1,18 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const [users, setUser] = useState([]);
+
+  useEffect (()=>{
+    fetch("http://localhost:5000/api/users")
+    .then(res => res.json())
+    .then(data => setUser(data.users))
+    
+  });
 
   return (
     <>
@@ -18,12 +26,15 @@ function App() {
       </div>
       <h1>REACT + FLASK</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <h2>USER</h2>
+        <ul>
+          {users.map((user)=>(
+            <li key={user.id}>
+              {user.first_name}{user.lastname}
+            </li>
+          ))}
+        </ul>
+        
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
