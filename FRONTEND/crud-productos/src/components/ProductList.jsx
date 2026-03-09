@@ -1,6 +1,5 @@
-import  { useState } from 'react'
-import { getProducts } from '../api/products'
-import { useEffect } from 'react'
+import  { useState, useEffect } from 'react';
+import { getProducts } from '../api/products';
 
 export default function ProductList() {
 
@@ -9,7 +8,7 @@ export default function ProductList() {
     const loadProducts = async() => {
         const response = await getProducts()
         setProducts(response.data)
-        console.log(response)
+        
     }
     useEffect(()=>{
         loadProducts()
