@@ -1,45 +1,50 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-//pagina de inicio
+
 import App from './App.tsx'
-//pagina de rutas
-import Login from './routes/login.tsx'
+
+
+import Login from './routes/Login.tsx'
 import Signup from './routes/signup.tsx'
 import Dashboard from './routes/Dashboard.tsx'
 
-//las rutas 
+// router
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+// auth
+import { AuthProvider } from './auth/AuthProvider.tsx'
+import ProtectedRoute from './routes/ProtectedRoute.tsx'
 
-
-
-
-
-
-// vamod a crear las rutas
+// rutas
 const router = createBrowserRouter([
   {
-      path: '/',
-     element: <App />,
-    },
-     {
-      path: '/login',
-     element: <Login />,
-    },
-    {
-      path: '/signup',
-     element: <Signup/>,
-    },
-    {
-      path: '/dashboard',
-     element: <Dashboard />,
-    }
-])
-  
+    path: '/',
+    element: <App />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
+  },
+  {
+    path: '/signup',
+    element: <Signup />,
+  },
+  {
+    element: <ProtectedRoute />,
+    children: [
+      {
+        path: 'dashboard',
+        element: <Dashboard />,
+      },
+    ],
+  },
+]);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  </StrictMode>
 )
