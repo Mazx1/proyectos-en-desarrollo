@@ -1,11 +1,11 @@
 import './App.css';
-import DefaultLayout from './layout/DefaultLayout';
+import DefaultLayout2 from './layout/DefaultLayout2';
 
 function App() {
   return (
-   <DefaultLayout>
+   <DefaultLayout2>
       <h1>Welcome to the Auth App</h1>
-   </DefaultLayout>
+   </DefaultLayout2>
   )
 }
 

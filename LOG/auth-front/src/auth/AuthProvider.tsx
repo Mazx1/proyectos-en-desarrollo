@@ -8,7 +8,7 @@ const AuthContext = createContext({
     isAuthenticated: false,
 });
 export function AuthProvider({children}: AuthProviderProps){
-    const [isAuthenticated] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     return (
         <AuthContext.Provider value={{ isAuthenticated }}>
