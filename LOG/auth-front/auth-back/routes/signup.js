@@ -5,9 +5,9 @@ const { jsonResponse } = require('../lib/jsonResponse');
 
 
 router.post('/', (req, res) => {
-    const { username, email, password } = req.body;
+    const { username, name, password } = req.body;
 
-    if (!username || !email || !password) {
+    if (!!!username || !!!name || !!!password) {
         return res.status(400).json(jsonResponse(400, { message: 'All fields are required' }));
     }   
 
