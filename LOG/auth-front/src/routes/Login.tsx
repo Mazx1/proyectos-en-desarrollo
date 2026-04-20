@@ -2,7 +2,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../auth/AuthProvider";
 import DefaultLayout from "../layout/DefaultLayout"
 import { useState } from "react";
-import type { AuthResponseError } from "../types/types";
+import type { AuthResponse, AuthResponseError } from "../types/types";
 import { API_BASE_URL } from "../auth/constance";
 
 
@@ -16,8 +16,7 @@ export default function Login() {
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) { 
             e.preventDefault();
-            try {
-                
+            try {                
                 const response = await fetch(`${API_BASE_URL}/login`, {
                     method: "POST",
                     headers: {
@@ -29,8 +28,13 @@ export default function Login() {
                 if (response.ok) {
                     console.log("Login successful");
                     setErrorResponse("");
-    
-                    goTo("/");
+                    const json = (await response.json()) as AuthResponse;
+                    
+                    if(json.body.accessToken && json.body.refreshToken){
+                        auth.saveUser(json);
+                        goTo("/dashboard");
+                    }    
+                    
                 } else {
                     console.log("something went wrong");
                     const json = (await response.json()) as AuthResponseError;

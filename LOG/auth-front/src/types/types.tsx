@@ -7,6 +7,8 @@ export interface AuthResponse {
 }
 export interface AuthResponseError {
     body:{
+        accessToken: any;
+        refreshToken: any;
         error: string;
     };
 }
