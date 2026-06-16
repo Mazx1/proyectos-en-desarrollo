@@ -15,7 +15,7 @@ export default function Signup() {
     const auth = useAuth();
     const goTo = useNavigate();
 
-    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) { 
+    async function handleSubmit(e: React.ChangeEvent<HTMLFormElement>) { 
         e.preventDefault();
         try {
             
@@ -31,7 +31,7 @@ export default function Signup() {
                 console.log("Signup successful");
                 setErrorResponse("");
 
-                goTo("/");
+            goTo("/");
             } else {
                 console.log("something went wrong");
                 const json = (await response.json()) as AuthResponseError;

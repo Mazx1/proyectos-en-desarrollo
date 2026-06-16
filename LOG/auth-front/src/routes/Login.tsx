@@ -14,7 +14,7 @@ export default function Login() {
     const goTo = useNavigate();
 
 
-    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) { 
+    async function handleSubmit(e: React.ChangeEvent<HTMLFormElement>) { 
             e.preventDefault();
             try {                
                 const response = await fetch(`${API_BASE_URL}/login`, {
@@ -22,7 +22,7 @@ export default function Login() {
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    body: JSON.stringify({ username, password })
+                    body: JSON.stringify({ username, password }),
                 });
     
                 if (response.ok) {

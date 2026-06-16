@@ -6,14 +6,12 @@ export interface AuthResponse {
     };
 }
 export interface AuthResponseError {
-    body:{
-        accessToken: any;
-        refreshToken: any;
+    body:{        
         error: string;
     };
 }
 export interface User {
-    _id: number;
+    _id: string;
     name: string;
     username: string;
 }

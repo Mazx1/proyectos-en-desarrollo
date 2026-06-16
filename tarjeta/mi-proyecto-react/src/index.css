@@ -1,0 +1,63 @@
+.app {
+  color: white;
+  min-height: 200vh;
+}
+
+/* 🎥 VIDEO FONDO */
+.video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+/* 🌟 HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📜 SCROLL */
+.view-container {
+  padding: 80px 20px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding-bottom: 200px; /* 👈 ESTO ES CLAVE */
+}
+
+.block {
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+.scroll-content img {
+  width: 280px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.scroll-content img {
+  width: 300px;   /* 👈 tamaño */
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}

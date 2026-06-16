@@ -16,7 +16,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { AuthProvider } from './auth/AuthProvider.tsx'
 import ProtectedRoute from './routes/ProtectedRoute.tsx'
 
-// rutas
+
 const router = createBrowserRouter([
   {
     path: '/',

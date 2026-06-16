@@ -24,7 +24,7 @@ export function AuthProvider({children}: AuthProviderProps){
         setAccessToken(userData.body.accessToken);
         setRefreshToken(userData.body.refreshToken);
 
-        localStorage.setItem("accessToken", JSON.stringify(userData.body.refreshToken));
+        localStorage.setItem("Token", JSON.stringify(userData.body.refreshToken));
         setIsAuthenticated(true);
     }   
 

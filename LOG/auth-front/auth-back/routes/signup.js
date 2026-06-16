@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const { jsonResponse } = require('../lib/jsonResponse');
 const User = require('../schema/user');
+const express = require("express");
 
 
-
-router.post('/', (req, res) => {
+router.post('/',async  (req, res) => {
     const { username, name, password } = req.body;
 
     if (!!!username || !!!name || !!!password) {
@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
     /// crear usuario en la base de dato
     try {
         const user = new User();
-    const exists = newUser.usernameExist(username);
+    const exists = await user.usernameExist(username);
     if(exists){
         return res.status(400).json(jsonResponse(400, { message: 'Username already exists' }));
     }
@@ -23,7 +23,7 @@ router.post('/', (req, res) => {
         name,
         password
     });
-    newUser.save();
+    await newUser.save();
 
 
     //usuario creado exitosamente
