@@ -29,6 +29,13 @@
   justify-content: center;
   align-items: center;
 }
+.hero1 {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* 📜 SCROLL */
 .view-container {
@@ -60,4 +67,7 @@
   height: auto;
   border-radius: 15px;
   object-fit: cover;
+}
+audio {
+  display: none;
 }

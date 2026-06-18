@@ -77,6 +77,66 @@
 
   color: white;
 }
-audio {
-  display: none;
+.ubicacion {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1.5rem;
+  text-align: center;
 }
+
+.ubicacion h3 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.mapa-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.mapa-info {
+  padding: 1rem 1.5rem;
+}
+
+.mapa-nombre {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  margin: 0 0 4px;
+}
+
+.mapa-direccion {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 1rem;
+}
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 1rem auto 0;
+  padding: 12px 28px;
+  background: rgba(37, 211, 102, 0.2);
+  border: 1px solid rgba(37, 211, 102, 0.5);
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: background 0.3s;
+  max-width: 320px;
+}
+
+.whatsapp-btn:hover {
+  background: rgba(37, 211, 102, 0.4);
+}
+
