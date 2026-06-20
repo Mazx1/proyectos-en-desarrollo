@@ -140,3 +140,94 @@
   background: rgba(37, 211, 102, 0.4);
 }
 
+
+/* VestuarioDropdown.css */
+
+.vestuario-wrapper {
+  padding: 24px;
+  display: inline-block;
+}
+
+.vestuario-btn button {
+  font-family: 'Georgia', serif;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  border-radius: 30px;
+  padding: 8px 20px;
+  border: 2px solid #c9a0b0;
+  color: #7a3f55;
+  background: white;
+  transition: all 0.2s;
+}
+
+.vestuario-btn button:hover {
+  
+  border-color: #a0607a;
+  color: #a0607a;
+}
+
+.vestuario-menu {
+  padding: 16px;
+  
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  min-width: 340px;
+}
+
+.vestuario-titulo {
+  text-align: center;
+  font-size: 12px;
+  color: #b07090;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+.vestuario-grid {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.vestuario-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #f3c6d5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  background: white;
+}
+
+.vestuario-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(160, 96, 122, 0.2);
+}
+
+.vestuario-img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+}
+
+.vestuario-label {
+  font-size: 11px;
+  color: #b07090;
+  font-family: 'Georgia', serif;
+  padding-bottom: 6px;
+}
+
+.vestuario-footer {
+  text-align: center;
+  font-size: 11px;
+  color: #cca0b0;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+

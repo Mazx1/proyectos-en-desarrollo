@@ -35,6 +35,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 80%;
+  max-width: 500px;
+
+  margin: 80px auto;   /* 👈 CENTRADO */
+  padding: 40px 30px;
+
+  text-align: center;  /* 👈 CENTRA TEXTO */
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+
+  color: white;
 }
 
 /* 📜 SCROLL */
