@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
 import videoFondo from "./assets/fondo.mp4";
-import musica from "./assets/musica.mp3";
+import musica from "./assets/Olivia Newton John .mp3";
 
 function App() {
 
@@ -135,7 +135,7 @@ function App() {
 
         {/* 📅 CARD */}
         <section className="card">
-          <h3>Falta para el gran día</h3>
+          <h3>EL GRAN DIA ES EL 05 DE SEPTIEMBRE A LAS 8 PM</h3>
           <div className="countdown"></div>
         </section>
 
