@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
 import videoFondo from "./assets/fondo.mp4";
-import musica from "./assets/Olivia Newton John .mp3";
+import musica from "./assets/Olivia Newton John.mp3";
 
 function App() {
 
@@ -35,8 +35,14 @@ function App() {
         </video>
 
         {/* 🌟 HERO */}
+        
+
         <section className="hero">
-          <h1>MIS XV</h1>
+
+          <div className="scroll-content" style={{ marginBottom: '3.5rem' }}>
+            <img src="/imagen.jpg" alt="imagen" />
+          </div>
+          <h1 style={{ marginBottom: '1.5rem' }}>MIS XV</h1>
           <h2>GABRIELA</h2>
 
         </section>
@@ -50,17 +56,8 @@ function App() {
         </section>
 
         {/* 📜 SCROLL CONTENIDO */}
-        <div className="view-container">
+        <div className="view-container">    
 
-          <div className="scroll-content">
-            <img src="/imagen.jpg" alt="imagen" />
-          </div>
-
-          <div className="scroll-content">
-            <img src="/imagen4.jpg" alt="imagen4" />
-          </div>
-
-          
           <div className="vestuario-wrapper">
             <DropdownButton
               id="dropdown-vestuario"
@@ -69,7 +66,6 @@ function App() {
               className="vestuario-btn"
             >
               <div className="vestuario-menu">
-
                 <p className="vestuario-titulo">💐 Inspiración de outfits</p>
 
                 <div className="vestuario-grid">
@@ -130,12 +126,10 @@ function App() {
               </div>
             </div>
           </section>
-
         </div>
-
         {/* 📅 CARD */}
-        <section className="card">
-          <h3>EL GRAN DIA ES EL 05 DE SEPTIEMBRE A LAS 8 PM</h3>
+        <section className="card">          
+          <h3>EL GRAN DIA ES EL 05 DE SEPTIEMBRE A LAS 7 PM</h3>
           <div className="countdown"></div>
         </section>
 
