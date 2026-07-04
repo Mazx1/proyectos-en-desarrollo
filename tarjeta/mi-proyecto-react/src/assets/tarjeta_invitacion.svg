@@ -1,0 +1,96 @@
+<svg viewBox="0 0 800 1150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Tangerine:wght@700&amp;family=Cinzel:wght@400;500;600&amp;display=swap');
+
+      .script { font-family: 'Tangerine', cursive; font-weight: 700; fill: #E8C879; }
+      .cinzel { font-family: 'Cinzel', serif; fill: #F3E9D2; letter-spacing: 6px; }
+      .cinzel-gold { font-family: 'Cinzel', serif; fill: #E8C879; letter-spacing: 4px; }
+      .body { font-family: 'Cormorant Garamond', serif; fill: #E9E2D2; }
+      .body-it { font-family: 'Cormorant Garamond', serif; font-style: italic; fill: #D9CFB8; }
+    </style>
+
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F6E7B4" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#F6E7B4" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="goldLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C9A65C" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#E8C879" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#C9A65C" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="frameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8C879"/>
+      <stop offset="50%" stop-color="#C9A65C"/>
+      <stop offset="100%" stop-color="#E8C879"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Decorative frame (no background fill = transparent) -->
+  <rect x="30" y="30" width="740" height="1090" fill="none" stroke="url(#frameGrad)" stroke-width="2"/>
+  <rect x="42" y="42" width="716" height="1066" fill="none" stroke="url(#frameGrad)" stroke-width="0.75"/>
+
+  <!-- Corner flourishes -->
+  <g stroke="#E8C879" stroke-width="1.4" fill="none" opacity="0.9">
+    <path d="M30,80 Q30,30 80,30"/>
+    <path d="M770,80 Q770,30 720,30"/>
+    <path d="M30,1070 Q30,1120 80,1120"/>
+    <path d="M770,1070 Q770,1120 720,1120"/>
+  </g>
+  <g fill="#E8C879">
+    <circle cx="30" cy="30" r="4"/>
+    <circle cx="770" cy="30" r="4"/>
+    <circle cx="30" cy="1120" r="4"/>
+    <circle cx="770" cy="1120" r="4"/>
+  </g>
+
+  <!-- Moon + stars signature -->
+  <circle cx="400" cy="175" r="80" fill="url(#moonGlow)"/>
+  <g transform="translate(400,175)">
+    <path d="M 18,-42 A 44,44 0 1 0 18,42 A 34,34 0 1 1 18,-42 Z" fill="#F3E4B0"/>
+  </g>
+  <g fill="#E8C879">
+    <path d="M 300,120 l4,11 11,4 -11,4 -4,11 -4,-11 -11,-4 11,-4 Z"/>
+    <path d="M 495,205 l3,8 8,3 -8,3 -3,8 -3,-8 -8,-3 8,-3 Z"/>
+    <path d="M 505,120 l2.5,6 6,2.5 -6,2.5 -2.5,6 -2.5,-6 -6,-2.5 6,-2.5 Z"/>
+    <path d="M 285,225 l2.5,6 6,2.5 -6,2.5 -2.5,6 -2.5,-6 -6,-2.5 6,-2.5 Z"/>
+  </g>
+
+  <!-- Eyebrow -->
+  <text x="400" y="300" text-anchor="middle" class="cinzel-gold" font-size="20">CON MUCHO AMOR TE INVITO</text>
+
+  <line x1="250" y1="325" x2="550" y2="325" stroke="url(#goldLine)" stroke-width="1"/>
+
+  <!-- Script headline -->
+  <text x="400" y="440" text-anchor="middle" class="script" font-size="130">a celebrar</text>
+  <text x="400" y="520" text-anchor="middle" class="cinzel" font-size="34">ESTE MOMENTO MUY ESPECIAL</text>
+  <text x="400" y="558" text-anchor="middle" class="cinzel" font-size="34">EN MI VIDA</text>
+
+  <line x1="250" y1="595" x2="550" y2="595" stroke="url(#goldLine)" stroke-width="1"/>
+
+  <!-- Body copy -->
+  <text x="400" y="660" text-anchor="middle" class="body-it" font-size="26">
+    <tspan x="400" dy="0">Espero que puedas acompañarme a disfrutar</tspan>
+    <tspan x="400" dy="34">de este día tan importante para mí.</tspan>
+  </text>
+
+  <text x="400" y="760" text-anchor="middle" class="body-it" font-size="26">
+    <tspan x="400" dy="0">Será una noche mágica e inolvidable,</tspan>
+    <tspan x="400" dy="34">llena de sorpresas y momentos que quedarán</tspan>
+    <tspan x="400" dy="34">en nuestros corazones para siempre.</tspan>
+  </text>
+
+  <!-- Small star divider -->
+  <g fill="#E8C879" transform="translate(400,850)">
+    <path d="M 0,-9 L 3,-3 9,0 3,3 0,9 -3,3 -9,0 -3,-3 Z"/>
+  </g>
+
+  <!-- Date block -->
+  <text x="400" y="940" text-anchor="middle" class="cinzel-gold" font-size="24">EL GRAN DÍA ES EL</text>
+  <text x="400" y="1010" text-anchor="middle" class="cinzel-gold" font-size="72" font-weight="600">05 DE SEPTIEMBRE</text>
+  <text x="400" y="1060" text-anchor="middle" class="cinzel" font-size="30">A LAS 7:00 PM</text>
+
+  <line x1="300" y1="1090" x2="500" y2="1090" stroke="url(#goldLine)" stroke-width="1"/>
+</svg>

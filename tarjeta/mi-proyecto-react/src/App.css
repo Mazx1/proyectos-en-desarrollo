@@ -231,3 +231,59 @@
   margin-bottom: 0;
 }
 
+
+.diluvio-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 16px;
+  border: 1px solid #E8C879;
+  box-shadow: 0 0 25px rgba(232, 200, 121, 0.35);
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.diluvio-box h2 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 4px;
+  color: #E8C879;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.dresscode-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+  padding: 1.2rem 2rem;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 14px;
+  border: 1px solid #E8C879;
+  box-shadow: 0 0 20px rgba(232, 200, 121, 0.3);
+  max-width: 320px;
+  margin: 1.5rem auto;
+}
+
+.dresscode-box h2 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 3px;
+  color: #E8C879;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.dresscode-box p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: #D9CFB8;
+  font-size: 1rem;
+  margin: 0;
+}

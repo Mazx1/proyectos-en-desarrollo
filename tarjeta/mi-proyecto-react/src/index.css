@@ -60,6 +60,7 @@
   gap: 30px;
   align-items: center;
   padding-bottom: 200px; /* 👈 ESTO ES CLAVE */
+  gap: 1.5rem;
 }
 
 .block {
