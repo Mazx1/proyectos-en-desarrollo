@@ -48,6 +48,8 @@ function App() {
         <h2>GABRIELA</h2>
 
       </section>
+
+      
       <section className="hero1">
         <div style={{ maxWidth: "650px", margin: "0 auto" }}>
           <svg viewBox="0 0 800 1150" xmlns="http://www.w3.org/2000/svg" style={{ width: "100%", height: "auto" }}>
@@ -195,7 +197,7 @@ function App() {
               margin: 0,
             }}
           >
-            👔 Traje formal
+            👔 Traje formal para disco
           </h2>
           <p
             style={{
@@ -260,7 +262,7 @@ function App() {
               margin: 0,
             }}
           >
-            💌 Diluvio de sobres
+            💌 Lluvia de sobres
           </h2>
         </div>
 
