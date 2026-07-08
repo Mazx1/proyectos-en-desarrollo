@@ -19,7 +19,21 @@ function App() {
   ];
 
   useEffect(() => {
-    audioRef.current?.play().catch(() => { });
+    const iniciarMusica = () => {
+      if (audioRef.current) {
+        audioRef.current.play().catch((err) => console.log("No se pudo reproducir:", err));
+      }
+      document.removeEventListener('click', iniciarMusica);
+      document.removeEventListener('touchstart', iniciarMusica);
+    };
+
+    document.addEventListener('click', iniciarMusica);
+    document.addEventListener('touchstart', iniciarMusica);
+
+    return () => {
+      document.removeEventListener('click', iniciarMusica);
+      document.removeEventListener('touchstart', iniciarMusica);
+    };
   }, []);
 
   return (
