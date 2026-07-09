@@ -21,18 +21,18 @@ function App() {
   useEffect(() => {
     const iniciarMusica = () => {
       if (audioRef.current) {
-        audioRef.current.play().catch((err) => console.log("No se pudo reproducir:", err));
+        audioRef.current.play().catch((err) => alert("Error audio: " + err.name + " - " + err.message));
       }
       document.removeEventListener('click', iniciarMusica);
-      document.removeEventListener('touchstart', iniciarMusica);
+      document.removeEventListener('touchend', iniciarMusica);
     };
 
     document.addEventListener('click', iniciarMusica);
-    document.addEventListener('touchstart', iniciarMusica);
+    document.addEventListener('touchend', iniciarMusica);
 
     return () => {
       document.removeEventListener('click', iniciarMusica);
-      document.removeEventListener('touchstart', iniciarMusica);
+      document.removeEventListener('touchend', iniciarMusica);
     };
   }, []);
 
@@ -41,7 +41,7 @@ function App() {
     <div className="app">
 
       {/* 🎵 MÚSICA DE FONDO */}
-      <audio autoPlay loop>
+      <audio ref={audioRef} loop>
         <source src={musica} type="audio/mp3" />
       </audio>
 
