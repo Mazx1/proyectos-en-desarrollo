@@ -34,7 +34,7 @@ function App() {
       {/* 👉 Pantalla de inicio: solo se muestra si NO se ha iniciado */}
       {!iniciado && (
         <div className="pantalla-inicio">
-          <img src="/imagen.jpg" alt="imagen" className="imagen-inicio" />          
+          <img src="/imagen.jpg" alt="imagen" className="imagen-inicio" />
           <button className="boton-iniciar" onClick={handleIniciar}>
             💌 Abrir invitación
           </button>
@@ -296,8 +296,12 @@ function App() {
                 />
                 Confirmar asistencia por WhatsApp
               </a>
-              <div className="scroll-content" style={{ marginTop: '1.5rem' }}>
-                <img src="/aviso.jpg" alt="aviso" />
+              <div className="scroll-content" style={{ marginTop: '1.9rem' }}>
+                <img
+                  src="/fecha.jpg"
+                  alt="aviso"
+                  style={{ width: '110%', maxWidth: '500px' }}
+                />
               </div>
             </div>
 
