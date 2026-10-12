@@ -1,0 +1,129 @@
+.app-container {
+  background-color: #8B0000;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-text {
+  font-size: 2.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.sub-logo {
+  color: #FFD700;
+  font-size: 1.4em;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.main-image {
+  max-width: 350px; /* Tamaño reducido de la imagen */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 15px auto;
+  display: block;
+}
+
+.slogan {
+  font-style: italic;
+  color: #FFD700;
+  margin-top: 5px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.menu-column {
+  flex: 1 1 300px;
+  max-width: 45%;
+}
+
+.menu-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 10px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+.item-name-special {
+  color: #FFD700;
+}
+
+.item-name-normal {
+  color: white;
+}
+
+.item-price {
+  color: #FFD700;
+}
+
+.item-description {
+  font-size: 0.9em;
+  color: #ddd;
+  margin-top: 3px;
+  font-style: italic;
+}
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  border-top: 2px solid white;
+  padding-top: 20px;
+}
+
+.domicilios {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.order-now {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .menu-column {
+    max-width: 100%;
+  }
+}
