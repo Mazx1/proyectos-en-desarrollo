@@ -1,10 +1,10 @@
-import {AuthProvider} from "./context/AuthContext.tsx";
+import {AuthProvider} from "./context/AuthContext";
 import { BrowserRouter,Routes,Route} from "react-router-dom";
 
 
 
-import RegisterPage from "./pages/RegisterPage.tsx";
-import LoginPage from "./pages/LoginPage.tsx";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
