@@ -1,7 +1,8 @@
 import User from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 import { createAccessToken } from "../libs/jwt.js";
-
+import jwt from "jsonwebtoken";
+import {TOKEN_SECRET} from "../config.js";
 
 export const register = async (req, res) => { 
     const { username, email, password } = req.body;
@@ -46,7 +47,11 @@ export const login = async (req, res) => {
 
         const token = await createAccessToken({ id: userFound._id });
 
-        res.cookie("token", token);
+        res.cookie("token", token, {
+            sameSite: "none",
+            secure: true,
+            httpOnly: true
+        });
         res.json({
             id: userFound._id,
             username: userFound.username,
@@ -82,4 +87,23 @@ export const profile = async (req, res) => {
     });
     console.log(req.user);
     res.send("Profile route");
+};
+
+export const verifyToken = async (req, res) => {
+    const {token} = req.cookies
+    if(!token) return res.status(401).json({message: "No token provided"});
+
+    jwt.verify(token, TOKEN_SECRET, async(err, user)=>{
+        const { token } = req.cookies;
+        if (!token) return res.status(401).json({ message: "No token provided" });
+
+        const userFound = await User.findById(user.id);
+        if (!userFound) return res.status(400).json({ message: "User not found" });
+
+        return res.json({
+            id: userFound._id,
+            username: userFound.username,
+            email: userFound.email,
+    });
+    });
 };

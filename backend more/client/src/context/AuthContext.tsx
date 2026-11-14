@@ -1,6 +1,7 @@
-import { createContext, useState, useContext, type ReactNode } from "react";
+import { createContext, useState, useContext, type ReactNode, useEffect } from "react";
 import { isAxiosError } from "axios";
-import { registerRequest, loginRequest, type RegisterData } from "../api/auth";
+import { registerRequest, loginRequest, verifyTokenRequest,  type RegisterData } from "../api/auth";
+import  Cookies  from "js-cookie";
 
 type LoginData = { email: string; password: string };
 
@@ -40,6 +41,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const signup = async (userData: RegisterData): Promise<void> => {
         try {
             const res = await registerRequest(userData);
+            console.log("Login successful:", res.data);
             setUser(res.data);
             setIsAuthenticated(true);
             setErrors([]);
@@ -52,6 +54,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const signin = async (userData: LoginData): Promise<void> => {
         try {
             const res = await loginRequest(userData);
+            console.log("Login successful:", res.data);
             setUser(res.data);
             setIsAuthenticated(true);
             setErrors([]);
@@ -60,6 +63,45 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
             setErrors(parseErrors(error));
         }
     };
+
+    useEffect(() => {
+        if(errors.length > 0) {
+            const timer = setTimeout(() => {
+                setErrors([]);
+            }, 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [errors]);
+
+    useEffect(() => {
+    async function checkLogin() {
+        const cookies = Cookies.get();
+
+        if (!cookies.token) {
+            setIsAuthenticated(false);
+            setUser(null);
+            return;
+        }
+
+        try {
+            const res = await verifyTokenRequest(cookies.token);
+
+            if (!res.data) {
+                setIsAuthenticated(false);
+                setUser(null);
+                return;
+            }
+
+            setIsAuthenticated(true);
+            setUser(res.data);
+        } catch (error) {
+            setIsAuthenticated(false);
+            setUser(null);
+        }
+    }
+
+    checkLogin();
+}, []);
 
     return (
         <AuthContext.Provider
